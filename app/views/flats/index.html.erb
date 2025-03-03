@@ -1,0 +1,12 @@
+<h1>Flats</h1>
+<%= link_to "Create a flat", new_flat_path %>
+
+<% @flats.each do |flat| %>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="">
+    <div class="card-product-infos">
+      <h2><%= link_to flat.name, flat_path(flat) %></h2>
+      <p><%= flat.address %></p>
+    </div>
+  </div>
+<% end %>
